@@ -1,19 +1,30 @@
 body {
-    min-height: 100vh;
+    height: calc(100vh - 4rem);
+    max-height: calc(100vh - 4rem);
+    margin: 0;
+    padding: 2rem 0;
     display: grid;
-    align-items: center;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: min(100%, 500px);
+    justify-content: center;
+  }
+  body > *{
+    padding: 0 5%;
   }
 
-  .typer {
-    margin: 0 auto;
-    background: white;
-    width: 500px;
-    padding: 2rem;
-    padding: 2rem;
-    border-radius: 3px;
-    display: grid;
+  .buttons{
+    display: flex;
+    flex-direction: column;
   }
 
-  textarea {
-    width: 100%;
+  .content{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: min(100%, 500px);
+  }
+
+  p {
+    margin-bottom: 0;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
   }
